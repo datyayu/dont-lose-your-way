@@ -5,7 +5,7 @@ self.addEventListener('install', function(e) {
   e.waitUntil(
     caches.open('dont-lose-your-way').then(function(cache) {
       return cache.addAll([
-        './',
+        '../',
         '../index.html',
         '../css/styles.css',
         '../js/player.js',
