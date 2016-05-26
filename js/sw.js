@@ -6,10 +6,10 @@ self.addEventListener('install', function(e) {
     caches.open('dont-lose-your-way').then(function(cache) {
       return cache.addAll([
         './',
-        './index.html',
-        './css/styles.css',
-        './js/player.js',
-        './dont.mp3',
+        '../index.html',
+        '../css/styles.css',
+        '../js/player.js',
+        '../dont.mp3',
       ]).then(function() {
         return self.skipWaiting();
       });
