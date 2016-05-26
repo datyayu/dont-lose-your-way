@@ -12,7 +12,6 @@
       this.loadSound = this.loadSound.bind(this);
       this.start = this.start.bind(this);
       this.stop = this.stop.bind(this);
-      this.init = this.init.bind(this);
     }
 
     loadSound(file) {
@@ -26,7 +25,7 @@
     }
 
     start() {
-      this.loadSound('/dont.mp3')
+      this.loadSound('./dont.mp3')
         .then(buffer => {
           this.source = this.audioCtx.createBufferSource();
           this.source.connect(this.audioCtx.destination);
@@ -44,13 +43,6 @@
       this.source.stop();
       this.onStopCallback();
       this.playing = false;
-    }
-
-    init() {
-      this.loadSound('/dont.mp3')
-        .then(buffer => {
-          this.source = this.audioCtx.createBufferSource();
-        });
     }
   }
 
