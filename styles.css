@@ -1,0 +1,39 @@
+body {
+  font-family: 'Open Sans', serif, sans-serif;;
+  background-color: #1D4157;
+  width: 100vw;
+  height: 100vh;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  margin: 0;
+}
+
+#button {
+  box-sizing: border-box;
+  font-size: 1.8em;
+  background-color: #D60808;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: .1em solid #980101;
+  cursor: pointer;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  transition: border-width .3s cubic-bezier(.6,.49,.14,.84);
+}
+
+#button:active {
+  border-width: .3em;
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="theme-color" content="#1D4157">
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <title>Service worker</title>
+
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link href="/styles.css" rel="stylesheet">
+  <link rel="icon" sizes="192x192" href="/icons/launcher-icon-4x.png">
+</head>
+<body>
+  <h1>Did you lose your way?</h1>
+  <div id="button">YES</div>
+
+  <script src="/scripts/player.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/scripts/sw.js')
+        .then(() => console.log('service worker done'))
+        .catch((err) => console.log('NOOOOOOO', err));
+    }
+  </script>
+</body>
+</html>
