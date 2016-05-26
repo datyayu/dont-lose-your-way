@@ -9,17 +9,17 @@
   <title>Service worker</title>
 
   <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-  <link href="/styles.css" rel="stylesheet">
-  <link rel="icon" sizes="192x192" href="/icons/launcher-icon-4x.png">
+  <link href="./css/styles.css" rel="stylesheet">
+  <link rel="icon" sizes="192x192" href="./icons/launcher-icon-4x.png">
 </head>
 <body>
   <h1>Did you lose your way?</h1>
   <div id="button">YES</div>
 
-  <script src="/scripts/player.js"></script>
+  <script src="./js/player.js"></script>
   <script>
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/scripts/sw.js')
+      navigator.serviceWorker.register('./js/sw.js')
         .then(() => console.log('service worker done'))
         .catch((err) => console.log('NOOOOOOO', err));
     }
