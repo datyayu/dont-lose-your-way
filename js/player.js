@@ -25,7 +25,7 @@
     }
 
     start() {
-      this.loadSound('./dont.mp3')
+      this.loadSound('/dont-lose-your-way/dont.mp3')
         .then(buffer => {
           this.source = this.audioCtx.createBufferSource();
           this.source.connect(this.audioCtx.destination);

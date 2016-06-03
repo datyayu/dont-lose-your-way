@@ -5,11 +5,11 @@ self.addEventListener('install', function(e) {
   e.waitUntil(
     caches.open('dont-lose-your-way').then(function(cache) {
       return cache.addAll([
-        '../',
-        '../index.html',
-        '../css/styles.css',
-        '../js/player.js',
-        '../dont.mp3',
+        '/dont-lose-your-way/',
+        '/dont-lose-your-way/index.html',
+        '/dont-lose-your-way/css/styles.css',
+        '/dont-lose-your-way/js/player.js',
+        '/dont-lose-your-way/dont.mp3',
       ]).then(function() {
         return self.skipWaiting();
       });
