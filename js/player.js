@@ -25,6 +25,8 @@
     }
 
     start() {
+      this.stop();
+
       this.loadSound('/dont-lose-your-way/dont.mp3')
         .then(buffer => {
           this.source = this.audioCtx.createBufferSource();
@@ -40,6 +42,8 @@
     }
 
     stop() {
+      if (!this.source) return;
+
       this.source.stop();
       this.onStopCallback();
       this.playing = false;
