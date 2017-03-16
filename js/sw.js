@@ -1,11 +1,11 @@
-const CACHE_VERSION = 1.0
+const CACHE_VERSION = 1.1
 const CACHE_NAME = `dont-lose-your-way-v${CACHE_VERSION}`
 const CACHED_ASSETS = [
-  '/dont-lose-your-way/',
-  '/dont-lose-your-way/index.html',
-  '/dont-lose-your-way/css/styles.css',
-  '/dont-lose-your-way/js/player.js',
-  '/dont-lose-your-way/dont.mp3',
+  'https://datyayu.github.io/dont-lose-your-way/',
+  'https://datyayu.github.io/dont-lose-your-way/index.html',
+  'https://datyayu.github.io/dont-lose-your-way/css/styles.css',
+  'https://datyayu.github.io/dont-lose-your-way/js/player.js',
+  'https://datyayu.github.io/dont-lose-your-way/dont.mp3',
 ]
 
 /*

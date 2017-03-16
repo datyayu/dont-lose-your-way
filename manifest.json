@@ -1,11 +1,11 @@
 {
-  "name": "Don't lose your SWay",
+  "name": "SWay",
   "version": "1.1.0",
   "author": "Arturo Coronel <aoitsu3@gmail.com> (https://datyayu.xyz)",
 
   "theme_color": "#1D4157",
   "background_color": "#1D4157",
-  "start_url": "https://datyayu.github.io/dont-lose-your-way/index.html",
+  "start_url": "https://datyayu.github.io/dont-lose-your-way",
   "display": "standalone",
   "orientation": "portrait",
 
