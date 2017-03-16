@@ -1,5 +1,14 @@
 {
   "name": "Don't lose your SWay",
+  "version": "1.1.0",
+  "author": "Arturo Coronel <aoitsu3@gmail.com> (https://datyayu.xyz)",
+
+  "theme_color": "#1D4157",
+  "background_color": "#1D4157",
+  "start_url": "https://datyayu.github.io/dont-lose-your-way/index.html",
+  "display": "standalone",
+  "orientation": "portrait",
+
   "icons": [
     {
       "src": "/dont-lose-your-way/icons/launcher-icon-0-75x.png",
@@ -37,8 +46,5 @@
       "type": "image/png",
       "density": 4.0
     }
-  ],
-  "start_url": "https://datyayu.github.io/dont-lose-your-way/index.html",
-  "display": "standalone",
-  "orientation": "portrait"
+  ]
 }

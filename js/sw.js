@@ -1,32 +1,42 @@
-importScripts('./cache-polyfill.js');
+const CACHE_VERSION = 1.0
+const CACHE_NAME = `dont-lose-your-way-v${CACHE_VERSION}`
+const CACHED_ASSETS = [
+  '/dont-lose-your-way/',
+  '/dont-lose-your-way/index.html',
+  '/dont-lose-your-way/css/styles.css',
+  '/dont-lose-your-way/js/player.js',
+  '/dont-lose-your-way/dont.mp3',
+]
 
-
-self.addEventListener('install', function(e) {
+/*
+** Install SW
+*/
+self.addEventListener('install', (e) => {
   e.waitUntil(
-    caches.open('dont-lose-your-way').then(function(cache) {
-      return cache.addAll([
-        '/dont-lose-your-way/',
-        '/dont-lose-your-way/index.html',
-        '/dont-lose-your-way/css/styles.css',
-        '/dont-lose-your-way/js/player.js',
-        '/dont-lose-your-way/dont.mp3',
-      ]).then(function() {
-        return self.skipWaiting();
-      });
-    })
-  );
-});
+    caches
+      .open(CACHE_NAME)
+      .then(cache => {
+        return cache
+          .addAll(CACHED_ASSETS)
+          .then(_ => self.skipWaiting())
+      })
+  )
+})
 
-self.addEventListener('activate', function(event) {
-  event.waitUntil(self.clients.claim());
-});
+/*
+** ACTIVATE SW
+*/
+self.addEventListener('activate', (event) => {
+  event.waitUntil(self.clients.claim())
+})
 
-self.addEventListener('fetch', function(event) {
-  console.log(event.request.url);
-
+/*
+** Intercept fetch
+*/
+self.addEventListener('fetch', (event) => {
   event.respondWith(
-    caches.match(event.request).then(function(response) {
-      return response || fetch(event.request);
-    })
-  );
-});
+    caches
+      .match(event.request)
+      .then(response => response || fetch(event.request))
+  )
+})
